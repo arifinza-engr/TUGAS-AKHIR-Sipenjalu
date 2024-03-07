@@ -1,0 +1,297 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Styles (Alphabetically ordered) */
+body {
+    padding-top: 57px;
+}
+
+#card-panel {
+    position: relative;
+    width: auto;
+    height: 210px;
+    background-image: url("../img/card.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10%;
+}
+
+#card-panel:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1.04);
+}
+
+#card_galeri {
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+#header-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    color: aliceblue;
+    text-shadow: 5px 5px 5px #000000 !important;
+    opacity: 100%;
+    animation: fadeIn 4s forwards;
+}
+
+#galeri_gambar {
+    width: 285px;
+    height: 227px;
+    object-fit: cover;
+}
+
+#navbar {
+    background: linear-gradient(90deg, rgba(0,138,255,1) 0%, rgba(104,165,255,1) 50%, rgba(29,136,255,1) 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+#oswald-font {
+    font-family: 'Oswald', sans-serif;
+}
+
+#text-brand {
+    font-family: 'Oswald', sans-serif;
+}
+
+#text-dinas {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+
+#text-home {
+    font-size: 80px;
+    margin-top: -80px;
+    text-shadow: 3px 3px 8px #000000;
+}
+
+#text-home1 {
+    font-size: medium;
+    text-shadow: 3px 3px 8px #000000;
+}
+
+#text-sipenjalu {
+    margin-top: 30px;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px !important;
+    letter-spacing: 2px;
+    color: aliceblue;
+    text-shadow: 5px 5px 5px #000000 !important;
+    opacity: 100%;
+    text-align: center;
+    display: inline-block;
+    opacity: 0;
+    animation: zoomIn 2s forwards;
+}
+
+.bg-infooo {
+    background: linear-gradient(45deg, 
+    rgba(0,88,255,1) 0%, 
+    rgba(0,138,255,1) 25%, 
+    rgba(29,136,255,1) 75%, 
+    rgba(0,58,255,1) 100%,
+    rgba(104,165,255,1) 50%);
+    };
+    
+
+.blue {
+    background-color: #0063c0;
+}
+
+.btn:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1.04);
+}
+
+.btn-sm {
+    display: block;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.card {
+    border: 2px solid #0099ff;
+}
+
+.card-3d {
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: perspective(1000px) translateZ(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-3d:hover {
+    transform: perspective(1000px) translateY(-10px) translateZ(10px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gradien {
+    background-color: rgb(91, 136, 203);
+}
+
+.green {
+    background-color: #00c106;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+    margin: 2rem 0;
+}
+
+.jumbotron {
+    background-image: url('../img/slider.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.0) 0%, 
+        rgba(0, 0, 0, 0.2) 25%, 
+        rgba(0, 0, 0, 0.2) 75%, 
+        rgba(0, 0, 0, 0.0) 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Pastikan dropdown-menu tidak ditampilkan secara default dan menambahkan transisi */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.5s ease;
+  }
+  
+  /* Menampilkan dropdown menu dengan transisi ketika dropdown ditampilkan */
+  .nav-item:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Menambahkan kembali aturan animasi ke dropdown menu */
+  .navbar-nav .dropdown-menu {
+    animation-fill-mode: forwards;
+    animation-duration: 0.9s;
+    animation-name: fadeInDown;
+  }
+  
+  /* Membuat keyframes untuk animasi fadeInDown */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+
+.navbar-brand:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.07);
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: rgb(61, 152, 255);
+    color: #fff;
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000000;
+    transform: scale(1.2);
+    text-shadow: 2px #fff;
+}
+
+.navbar-toggler:hover {
+    opacity: 0.8;
+}
+
+
+.red {
+    background-color: #ff1919;
+}
+
+.slider_text {
+    position: relative;
+    z-index: 1;
+}
+
+.buttonLogout{
+    margin-left: 50px;
+}
+
+  /* Existing styles for footer */
+#footer {
+    margin-top: 443px;
+}
+
+
+
+@media (max-width: 767px) {
+    #card-panel {
+        width: auto;
+        height: 160px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        transform: scale(1.05);
+        text-shadow: 2px #fff;
+    }
+
+    .buttonLogout{
+        margin-left: 0px;
+    }
+}

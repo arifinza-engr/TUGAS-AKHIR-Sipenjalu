@@ -1,0 +1,7 @@
+body {
+  background-image: linear-gradient(to left, #1471fc, #14bafc, #52caf9);
+}
+
+.jumbotron {
+  box-shadow: rgb(247, 0, 255) 0px 0px 10px;
+}
